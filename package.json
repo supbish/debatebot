@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "bard-ai": "^1.2.0",
+    "bardapi": "^1.0.4",
+    "dotenv": "^16.1.4",
+    "node-fetch": "^3.3.1",
+    "openai": "^3.2.1",
+    "speak-tts": "^2.0.8"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "copyfiles": "^2.4.1",
+    "esmify": "^2.1.1"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/browserify -p esmify app/main.mjs -o dist/bundle.js; ./node_modules/.bin/copyfiles --flat static/* dist"
+  }
+}
